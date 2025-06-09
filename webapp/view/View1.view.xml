@@ -1,0 +1,33 @@
+<mvc:View controllerName="sampleflight.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table noDataText="No records found">
+                <columns>
+                    <Column>
+                        <Text text="Agency Id"/>
+                    </Column>
+                    <Column>
+                        <Text text="Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Street"/>
+                    </Column>
+                    <Column>
+                        <Text text="City"/>
+                    </Column>
+                    <Column>
+                        <Text text="Country"/>
+                    </Column>
+                    <Column>
+                        <Text text="Phone"/>
+                    </Column>
+                    <Column>
+                        <Text text="Currency"/>
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
