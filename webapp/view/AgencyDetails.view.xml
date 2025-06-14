@@ -1,0 +1,14 @@
+<mvc:View controllerName="sampleflight.controller.AgencyDetails" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Page id="details" title="{i18n>detailTitle}" showNavButton="true" navButtonPress="onGoBack">
+        <content>
+            <form:SimpleForm >
+                <form:content>
+                    <Label text="Name"/>
+                    <Input placeholder="Enter Here" id="sName" width="50%" value="Puja" editable="false"/>
+                </form:content>
+                
+            </form:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

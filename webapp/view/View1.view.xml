@@ -3,7 +3,13 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <Table noDataText="No records found">
+        <!-- <SearchField /> -->
+            <Table noDataText="No records found" items="{/TravelAgencies}" mode="SingleSelectLeft" itemPress="onSelect" >
+            	<headerToolbar>
+                    <Toolbar>
+                        <SearchField />
+                    </Toolbar>
+		        </headerToolbar>
                 <columns>
                     <Column>
                         <Text text="Agency Id"/>
@@ -27,6 +33,20 @@
                         <Text text="Currency"/>
                     </Column>
                 </columns>
+                <items >
+                    <ColumnListItem type="Active" navigated="true" >
+                        <cells>
+                            <Text text="{agencynum}"/>
+                            <Text text="{NAME}"/>
+                            <Text text="{STREET}"/>
+                            <Text text="{CITY}"/>
+                            <Text text="{COUNTRY}"/>
+                            <Text text="{TELEPHONE}"/>
+                            <Text text="{CURRENCY}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+                
             </Table>
         </content>
     </Page>
