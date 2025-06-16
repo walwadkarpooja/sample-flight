@@ -2,12 +2,20 @@
     xmlns="sap.m" xmlns:form="sap.ui.layout.form">
     <Page id="details" title="{i18n>detailTitle}" showNavButton="true" navButtonPress="onGoBack">
         <content>
-            <form:SimpleForm >
+             <form:SimpleForm>
                 <form:content>
-                    <Label text="Name"/>
-                    <Input placeholder="Enter Here" id="sName" width="50%" value="Puja" editable="false"/>
+                    <Label text="NAME"/>
+                    <Input editable="{editModel>/isEditableField}" value="{/NAME}" />
+                    <Label text="AgencyNumber"/>
+                    <Input editable="{editModel>/isEditableField}" id="agencynum" value="{/agencynum}" />
+                    <Label text="Telephone"/>
+                    <Input editable="{editModel>/isEditableField}" value="{/TELEPHONE}" />
+                    <Label text="URL"/>
+                    <Input editable="{editModel>/isEditableField}" value="{/URL}"/>
+                    <Label text="LANGUAGE"/>
+                    <Input editable="{editModel>/isEditableField}" value="{/LANGU}"/>
+                    <Button text="edit" press="onEdit"/>
                 </form:content>
-                
             </form:SimpleForm>
         </content>
     </Page>

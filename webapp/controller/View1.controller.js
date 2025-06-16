@@ -9,15 +9,14 @@ function (Controller) {
 
         },
         onSelect: function (oEvent){
-            const listId = oEvent.getParameter('listItem')
+            let sPath = oEvent.getParameter("listItem").getBindingContext().getPath();
+            let oModel = this.getView().getModel();
             
-
-            let oModel = this.getView().getModel()
             const agencyId = oModel.getProperty(sPath).agencynum;
 
             const oRoute = this.getOwnerComponent().getRouter();
             oRoute.navTo("AgencyDetails",{agynId : agencyId});
-            // console.log(listId)
+            
         }
     });
 });
